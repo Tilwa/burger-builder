@@ -3,7 +3,7 @@ import './App.css';
 import Person from './Person/Person';
 import Validation from './ValidationComponent/ValidationComponent';
 import Char from './Char/Char';
-import Radium, {StyleRoot} from 'radium';
+
 
 class App extends Component {
   
@@ -60,16 +60,16 @@ class App extends Component {
   render () {
 
     const style1 = {
-      backgroundColor: 'green',
-      color: 'white',
-      font: 'inherit',
-      border: '1px solid blue',
-      padding: '8px',
-      cursor: 'pointer',
-      ':hover': {
-        backgroundColor: 'lightgreen',
-        color: 'black'
-      }
+      // backgroundColor: 'green',
+      // color: 'white',
+      // font: 'inherit',
+      // border: '1px solid blue',
+      // padding: '8px',
+      // cursor: 'pointer',
+      // ':hover': {
+      //   backgroundColor: 'lightgreen',
+      //   color: 'black'
+      // }
     };
 
     let persons = null;
@@ -86,11 +86,11 @@ class App extends Component {
           })}
         </div>
       );
-      style1.backgroundColor = 'red';
-      style1[':hover'] = {
-        backgroundColor: 'salmon',
-        color: 'black'
-      }
+      // style1.backgroundColor = 'red';
+      // style1[':hover'] = {
+      //   backgroundColor: 'salmon',
+      //   color: 'black'
+      // }
     }
 
 
@@ -111,13 +111,13 @@ class App extends Component {
     }
 
     return (
-      <StyleRoot>
         <div className="App">
 
           <p className={classes.join(' ')}>Hi, I'm a React App</p>
-          <button 
-            style={style1}
-            onClick={this.togglePersonsHandler}>Toggle Persons</button>
+          <button
+            className="button"
+            onClick={this.togglePersonsHandler}>Toggle Persons
+          </button>
 
           {persons}    
 
@@ -131,9 +131,8 @@ class App extends Component {
           <Validation inputLength={this.state.userInput.length}/>
           {charList}
         </div>
-      </StyleRoot>
     );
   }
 }
 
-export default Radium(App);
+export default App;
