@@ -5,7 +5,6 @@ class App extends Component {
     return (
       <div>
         <p>Hello world</p>
-        <p>my name is shahrukh altaf</p>
       </div>
     );
   }
